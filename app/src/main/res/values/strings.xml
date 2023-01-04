@@ -1,0 +1,231 @@
+<resources>
+    //general - untranslatable
+    <string name="app_name" translatable="false">myHealthMonitor</string>
+
+    //home
+    <string name="settings">Settings</string>
+    <string name="diary">Diary</string>
+    <string name="chart">Chart</string>
+    <string name="alarm">Alarm</string>
+    <string name="controlParameters">Controls</string>
+
+    //diary
+    <string name="noReportToday">No Report in this date</string>
+    <string name="newReport">New Report</string>
+    <string name="newPhysicalActivity">New Physical Activity\'s Report</string>
+    <string name="newGlycemia">New Glycemia\'s Report</string>
+    <string name="newWeight">New Weight\'s Report</string>
+    <string name="newPulse">New Pulse\'s Report</string>
+    <string name="newOxygenSaturation">New Oxygen Saturation\'s Report</string>
+    <string name="newTemperature">New Temperature\'s Report</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    //newReport
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="comment">Comment</string>
+    <string name="attention">Level of attention</string>
+    <string-array name="attention">
+        <item>Very low</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Very high</item>
+    </string-array>
+    <string name="saved">Saved</string>
+    <string name="deleted">Deleted</string>
+    <string name="required">Required Field</string>
+    <string name="noPositive">Value must be greater than 0</string>
+    <string name="sureBack">Are you sure you want to discard the change?</string>
+    <string name="sureDelete">Are you sure you want delete this report?</string>
+    <string name="error">Error</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+
+    //Report Physical Activity
+    <string name="physicalActivity">Physical Activity</string>
+    <string name="physicalActivityAbbreviation" translatable="false">PA</string>
+    <string name="calories">Calories</string>
+    <string name="steps">Steps</string>
+    <string name="distance">Distance</string>
+    <string name="duration">Duration</string>
+    <string-array name="valuePA">
+        <item>@string/calories</item>
+        <item>@string/steps</item>
+        <item>@string/distance</item>
+        <item>@string/duration</item>
+    </string-array>
+
+    //Report Glycemia
+    <string name="glycemia">Glycemia</string>
+    <string name="glycemiaAbbreviation" translatable="false">G</string>
+    <string name="glycemiaVal">Glycemia Value</string>
+    <string name="label">Label</string>
+    <string-array name="label">
+        <item>General</item>
+        <item>Before a meal</item>
+        <item>After a meal</item>
+    </string-array>
+    <string name="HbA1C">HbA1C</string>
+    <string name="breadUnit">Bread Unit</string>
+    <string name="bolus">Bolus (food)</string>
+    <string name="basal">Basal</string>
+    <string-array name="valueG">
+        <item>@string/glycemiaVal</item>
+        <item>@string/HbA1C</item>
+        <item>@string/breadUnit</item>
+        <item>@string/bolus</item>
+        <item>@string/basal</item>
+    </string-array>
+
+    //Report Weight
+    <string name="weight">Weight</string>
+    <string name="weightAbbreviation" translatable="false">W</string>
+    <string name="muscles">Muscles</string>
+    <string name="bodyFat">Body Fat</string>
+    <string name="water">Water</string>
+    <string-array name="valueW">
+        <item>@string/weight</item>
+        <item>@string/muscles</item>
+        <item>@string/bodyFat</item>
+        <item>@string/water</item>
+    </string-array>
+
+    //Report Pulse
+    <string name="pulse">Pulse</string>
+    <string name="pulseAbbreviation" translatable="false">P</string>
+    <string name="avgPulse">Average Pulse</string>
+    <string name="minPulse">Min. Pulse</string>
+    <string name="maxPulse">Max. Pulse</string>
+    <string-array name="valueP">
+        <item>@string/avgPulse</item>
+        <item>@string/minPulse</item>
+        <item>@string/maxPulse</item>
+    </string-array>
+
+    //Report Oxygen Saturation
+    <string name="oxygenSaturation">Oxygen Saturation</string>
+    <string name="oxygenSaturationAbbreviation" translatable="false">O</string>
+    <string name="SpO">SpO\u2082 Avg</string>
+    <string name="SpOMin">SpO\u2082 Min</string>
+    <string name="SpOMax">SpO\u2082 Max</string>
+    <string-array name="valueO">
+        <item>@string/SpO</item>
+        <item>@string/SpOMin</item>
+        <item>@string/SpOMax</item>
+    </string-array>
+
+    //Report Temperature
+    <string name="temperature">Temperature</string>
+    <string name="temperatureAbbreviation" translatable="false">T</string>
+    <string-array name="valueT">
+        <item>@string/temperature</item>
+    </string-array>
+
+    //chart
+    <string name="noReport">No Report on selected date</string>
+    <string name="general">Reports information</string>
+    <string name="reportTime">N° Report</string>
+    <string name="typeReportTime">N° Report for Type</string>
+    <string name="typeReport">% Report for Type</string>
+    <string-array name="typeReportPlusGeneral">
+        <item>@string/general</item>
+        <item>@string/physicalActivity</item>
+        <item>@string/glycemia</item>
+        <item>@string/weight</item>
+        <item>@string/pulse</item>
+        <item>@string/oxygenSaturation</item>
+        <item>@string/temperature</item>
+    </string-array>
+    <string-array name="valueGEN">
+        <item>Number of Report</item>
+    </string-array>
+    <string-array name="typeReportAbbreviationPlusGeneral">
+        <item>GEN</item>
+        <item>@string/physicalActivityAbbreviation</item>
+        <item>@string/glycemiaAbbreviation</item>
+        <item>@string/weightAbbreviation</item>
+        <item>@string/pulseAbbreviation</item>
+        <item>@string/oxygenSaturationAbbreviation</item>
+        <item>@string/temperatureAbbreviation</item>
+    </string-array>
+
+    //alarm
+    <string name="noAlarm">No Alarm</string>
+    <string name="newAlarm">New Alarm</string>
+    <string name="description">Name</string>
+    <string name="sound">Sound</string>
+    <string name="vibration">Vibration</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="plus10" translatable="false">+10 min.</string>
+
+    <string name="mondayAbbreviation">M</string>
+    <string name="tuesdayAbbreviation">T</string>
+    <string name="wednesdayAbbreviation">W</string>
+    <string name="thursdayAbbreviation">T</string>
+    <string name="fridayAbbreviation">F</string>
+    <string name="saturdayAbbreviation">S</string>
+    <string name="sundayAbbreviation">S</string>
+    <string-array name="daysOfWeekAbbreviation">
+        <item>MON</item>
+        <item>TUE</item>
+        <item>WED</item>
+        <item>THU</item>
+        <item>FRI</item>
+        <item>SAT</item>
+        <item>SUN</item>
+    </string-array>
+
+    <string name="timing">Timing</string>
+    <string-array name="timing">
+        <item>Last day</item>
+        <item>Last week</item>
+        <item>Last 15 days</item>
+        <item>Last month</item>
+        <item>Last 6 month</item>
+        <item>Last year</item>
+    </string-array>
+
+    //control parameters
+    <string name="noControlParameters">No Control Parameters</string>
+    <string name="newControlParameters">New Control Parameters</string>
+    <string name="reportType">Report Type</string>
+    <string name="valueType">Value Type</string>
+    <string name="minValue">Min Value</string>
+    <string name="maxValue">Max Value</string>
+    <string name="minAttention">Min Level of attention</string>
+    <string name="maxAttention">Max Level of attention</string>
+    <string name="minMaxErrorNoValue">You must enter min or max value</string>
+    <string name="minMaxError">The max value must be equal or greater than the min value</string>
+    <string name="outTarget">ALERT: you are out of your Target!</string>
+    <string name="tooLow">The average value of %s is lower than %.2f</string>
+    <string name="tooHigh">The average value of %s is higher than %.2f</string>
+    <string name="congrats">Good job!</string>
+    <string name="inTarget">The average value of %s is in your target</string>>
+
+    //unit of measure
+    <string name="glycemiaFormat">Unit of glycemia</string>
+    <string name="glycemia1" translatable="false">mg/dL</string>
+    <string name="glycemia2" translatable="false">mmol/L</string>
+
+    <string name="weightFormat">Unit of weight</string>
+    <string name="weight1" translatable="false">kg</string>
+    <string name="weight2" translatable="false">lb</string>
+
+    <string name="temperatureFormat">Unit of temperature</string>
+    <string name="temperature1" translatable="false">°C</string>
+    <string name="temperature2" translatable="false">°F</string>
+
+    <string name="lengthFormat">Unit of length</string>
+    <string name="length1" translatable="false">km</string>
+
+    <string name="length2" translatable="false">mi</string>
+    <string name="timeFormat">Time format</string>
+    <string name="time1" translatable="false">24h</string>
+
+    <string name="time2" translatable="false">12h</string>
+    <string name="dateFormat">Date format</string>
+    <string name="date1">dd/mm/yyyy</string>
+    <string name="date2">mm/dd/yyyy</string>
+</resources>

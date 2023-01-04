@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //home
+    <string name="settings">Impostazioni</string>
+    <string name="diary">Diario</string>
+    <string name="chart">Grafici</string>
+    <string name="alarm">Sveglia</string>
+    <string name="controlParameters">Controlli</string>
+
+    //diary
+    <string name="noReportToday">Nessun Report nella data selezionata</string>
+    <string name="newReport">Nuovo Report</string>
+    <string name="newPhysicalActivity">Nuovo Report Attività Fisica</string>
+    <string name="newGlycemia">Nuovo Report Glicemia</string>
+    <string name="newWeight">Nuovo Report Peso</string>
+    <string name="newPulse">Nuovo Report Polso</string>
+    <string name="newOxygenSaturation">Nuovo Report Saturazione Ossigeno</string>
+    <string name="newTemperature">Nuovo Report Temperatura</string>
+    <string name="open">Apri</string>
+    <string name="close">Chiudi</string>
+
+    //newReport
+    <string name="date">Data</string>
+    <string name="time">Ora</string>
+    <string name="comment">Commento</string>
+    <string name="attention">Livello di attenzione</string>
+    <string-array name="attention">
+        <item>Molto basso</item>
+        <item>Basso</item>
+        <item>Medio</item>
+        <item>Alto</item>
+        <item>Molto alto</item>
+    </string-array>
+    <string name="saved">Salvato</string>
+    <string name="deleted">Eliminato</string>
+    <string name="required">Campo Obbligatorio</string>
+    <string name="noPositive">Il valore deve essere maggiore di 0</string>
+    <string name="sureBack">Sicuro di voler tornare indietro senza salvare?</string>
+    <string name="sureDelete">Sicuro di voler eliminare questo report?</string>
+    <string name="error">Errore</string>
+    <string name="yes">Sì</string>
+    <string name="cancel">Annulla</string>
+
+    //Report Physical Activity
+    <string name="physicalActivity">Attività Fisica</string>
+    <string name="calories">Calorie</string>
+    <string name="steps">Passi</string>
+    <string name="distance">Distanza</string>
+    <string name="duration">Durata</string>
+
+    //Report Glycemia
+    <string name="glycemia">Glicemia</string>
+    <string name="glycemiaVal">Valore glicemico</string>
+    <string name="label">Tipologia</string>
+    <string-array name="label">
+        <item>Generale</item>
+        <item>Prima dei pasti</item>
+        <item>Dopo i pasti</item>
+    </string-array>
+    <string name="HbA1C">HbA1C</string>
+    <string name="breadUnit">Unità pane</string>
+    <string name="bolus">Bolo (pasto)</string>
+    <string name="basal">Basale</string>
+
+    //Report Weight
+    <string name="weight">Peso</string>
+    <string name="muscles">Muscoli</string>
+    <string name="bodyFat">Massa Grassa</string>
+    <string name="water">Acqua</string>
+
+    //Report Pulse
+    <string name="pulse">Polso</string>
+    <string name="avgPulse">Media Polso</string>
+    <string name="minPulse">Polso Min</string>
+    <string name="maxPulse">Polso Max</string>
+
+    //Report Oxygen Saturation
+    <string name="oxygenSaturation">Saturazione Ossigeno</string>
+    <string name="SpO">SpO\u2082 Medio</string>
+    <string name="SpOMin">SpO\u2082 Min</string>
+    <string name="SpOMax">SpO\u2082 Max</string>
+
+    //Report Temperature
+    <string name="temperature">Temperatura</string>
+
+    //chart
+    <string name="noReport">Nessun Report nelle date selezionate</string>
+    <string name="general">Informazioni Report</string>
+    <string name="reportTime">N° Report</string>
+    <string name="typeReportTime">N° Report per Tipo</string>
+    <string name="typeReport">% Report per Tipo</string>
+    <string-array name="valueGEN">
+        <item>Numero di Report</item>
+    </string-array>
+
+    //alarm
+    <string name="noAlarm">Nessuna Sveglia</string>
+    <string name="newAlarm">Nuova Sveglia</string>
+    <string name="description">Nome</string>
+    <string name="sound">Suono</string>
+    <string name="vibration">Vibrazione</string>
+    <string name="dismiss">Elimina</string>
+
+    <string name="mondayAbbreviation">L</string>
+    <string name="tuesdayAbbreviation">M</string>
+    <string name="wednesdayAbbreviation">M</string>
+    <string name="thursdayAbbreviation">G</string>
+    <string name="fridayAbbreviation">V</string>
+    <string name="saturdayAbbreviation">S</string>
+    <string name="sundayAbbreviation">D</string>
+    <string-array name="daysOfWeekAbbreviation">
+        <item>LUN</item>
+        <item>MAR</item>
+        <item>MER</item>
+        <item>GIO</item>
+        <item>VEN</item>
+        <item>SAB</item>
+        <item>DOM</item>
+    </string-array>
+
+    <string name="timing">Tempistiche</string>
+    <string-array name="timing">
+        <item>Ultimo giorno</item>
+        <item>Ultima settimana</item>
+        <item>Ultimi 15 giorni</item>
+        <item>Ultimo mese</item>
+        <item>Ultimi 6 mesi</item>
+        <item>Ultimo anno</item>
+    </string-array>
+
+    //control parameters
+    <string name="noControlParameters">Nessun Parametro di Controllo</string>
+    <string name="newControlParameters">Nuovo Parametro di Controllo</string>
+    <string name="reportType">Tipo Report</string>
+    <string name="valueType">Tipo Valore</string>
+    <string name="minValue">Min Valore</string>
+    <string name="maxValue">Max Valore</string>
+    <string name="minAttention">Min Livello di attenzione</string>
+    <string name="maxAttention">Max Livello di attenzione</string>
+    <string name="minMaxErrorNoValue">Devi inserire il valore di min o max</string>
+    <string name="minMaxError">Il valore max deve essere uguale o maggiore del valore min</string>
+    <string name="outTarget">ATTENZIONE: sei fuori dal tuo obbiettivo!</string>
+    <string name="tooLow">Il valore medio di %s è minore di %.2f</string>
+    <string name="tooHigh">Il valore medio di %s è maggiore di %.2f</string>
+    <string name="congrats">Buon Lavoro!</string>
+    <string name="inTarget">Il valore medio di %s è nell\'obbiettivo</string>
+
+    //unit of measure
+    <string name="glycemiaFormat">Unità di glicemia</string>
+    <string name="weightFormat">Unità di peso</string>
+    <string name="temperatureFormat">Unità di temperatura</string>
+    <string name="lengthFormat">Unità di lunghezza</string>
+    <string name="timeFormat">Formato orario</string>
+    <string name="dateFormat">Formato data</string>
+    <string name="date1">gg/mm/aaaa</string>
+    <string name="date2">mm/gg/aaaa</string>
+</resources>

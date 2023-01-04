@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myhealthmonitor">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyHealthMonitor">
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.MyHealthMonitor.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ModifyReportActivity"
+            android:label=""
+            android:theme="@style/Theme.MyHealthMonitor.NoActionBarColored"/>
+
+        <activity
+            android:name=".NewReportActivity"
+            android:label=""
+            android:theme="@style/Theme.MyHealthMonitor.NoActionBarColored"/>
+
+        <activity
+            android:name=".ModifyAlarmActivity"
+            android:label=""
+            android:theme="@style/Theme.MyHealthMonitor.NoActionBarColored"/>
+
+        <activity
+            android:name=".NewAlarmActivity"
+            android:label=""
+            android:theme="@style/Theme.MyHealthMonitor.NoActionBarColored"/>
+
+        <activity
+            android:name=".ModifyControlActivity"
+            android:label=""
+            android:theme="@style/Theme.MyHealthMonitor.NoActionBarColored"/>
+
+        <activity
+            android:name=".NewControlActivity"
+            android:label=""
+            android:theme="@style/Theme.MyHealthMonitor.NoActionBarColored"/>
+
+        <receiver android:process=":remote"  android:name=".AlarmBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".AlarmService" />
+        <service android:name=".RescheduleAlarmsService" />
+        <service android:name=".closeAlarm" />
+        <service android:name=".snoozeAlarm" />
+
+        <receiver android:process=":remote"  android:name=".ControlBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".ControlService" />
+        <service android:name=".RescheduleControlsService" />
+    </application>
+
+</manifest>

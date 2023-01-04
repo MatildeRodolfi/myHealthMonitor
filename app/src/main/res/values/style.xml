@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ToolbarWhiteText" parent="Theme.MyHealthMonitor">
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:colorControlNormal">@color/white</item>
+    </style>
+</resources>

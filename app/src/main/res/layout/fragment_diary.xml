@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@android:color/white"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iconDate"
+            app:srcCompat="@drawable/ic_calendar"
+            app:tint="@color/black"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="12dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/no_report_diary"
+        android:text="@string/noReportToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/filter"
+                android:layout_width="24dp"
+                android:layout_height="26dp"
+                android:layout_margin="12dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_filter" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/PAdiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filter">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconFA"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/img_shoe"
+                        android:background="@drawable/background_green_oval"
+                        app:tint="@color/white"
+                        android:padding="4dp"
+                        android:contentDescription="@string/physicalActivity"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/titlePA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/physicalActivity"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iconFA"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/avgPA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/openPA"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/open"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgPA"
+                        android:layout_marginTop="3dp"/>
+
+                    <ImageView
+                        android:id="@+id/closePA"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgPA"
+                        android:layout_marginTop="3dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/PAcont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/openPA"
+                        android:orientation="vertical"
+                        android:layout_marginTop="2dp"
+                        android:padding="5dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Gdiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/PAdiv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconG"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/img_drop"
+                        android:background="@drawable/background_green_oval"
+                        app:tint="@color/white"
+                        android:padding="5dp"
+                        android:contentDescription="@string/glycemia"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/glycemia"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iconG"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/avgG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/openG"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/open"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgG"
+                        android:layout_marginTop="3dp"/>
+
+                    <ImageView
+                        android:id="@+id/closeG"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgG"
+                        android:layout_marginTop="3dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/Gcont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/openG"
+                        android:orientation="vertical"
+                        android:layout_marginTop="2dp"
+                        android:padding="5dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Wdiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Gdiv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconW"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/background_green_oval"
+                        android:contentDescription="@string/weight"
+                        android:padding="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/img_weight"
+                        app:tint="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/openW"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:contentDescription="@string/open"
+                        android:scaleType="fitEnd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgW"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        app:tint="@color/green_dark" />
+
+                    <ImageView
+                        android:id="@+id/closeW"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:contentDescription="@string/close"
+                        android:scaleType="fitEnd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgW"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        app:tint="@color/green_dark" />
+
+                    <LinearLayout
+                        android:id="@+id/Wcont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/openW" />
+
+                    <TextView
+                        android:id="@+id/avgW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="3dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/weight"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iconW"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Pdiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Wdiv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconP"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/img_heart_beat"
+                        android:background="@drawable/background_green_oval"
+                        app:tint="@color/white"
+                        android:padding="5dp"
+                        android:contentDescription="@string/pulse"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/pulse"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iconP"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/avgP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/openP"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/open"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgP"
+                        android:layout_marginTop="3dp"/>
+
+                    <ImageView
+                        android:id="@+id/closeP"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgP"
+                        android:layout_marginTop="3dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/Pcont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/openP"
+                        android:orientation="vertical"
+                        android:layout_marginTop="2dp"
+                        android:padding="5dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Odiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Pdiv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconO"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/img_oxygen"
+                        android:background="@drawable/background_green_oval"
+                        app:tint="@color/white"
+                        android:padding="5dp"
+                        android:contentDescription="@string/oxygenSaturation"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/oxygenSaturation"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iconO"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/avgO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/openO"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/open"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgO"
+                        android:layout_marginTop="3dp"/>
+
+                    <ImageView
+                        android:id="@+id/closeO"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgO"
+                        android:layout_marginTop="3dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/Ocont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/openO"
+                        android:orientation="vertical"
+                        android:layout_marginTop="2dp"
+                        android:padding="5dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Tdiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Odiv">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/iconT"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/img_thermometer"
+                        android:background="@drawable/background_green_oval"
+                        app:tint="@color/white"
+                        android:padding="5dp"
+                        android:contentDescription="@string/temperature"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/temperature"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/iconT"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/avgT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/openT"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/open"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgT"
+                        android:layout_marginTop="3dp"/>
+
+                    <ImageView
+                        android:id="@+id/closeT"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitEnd"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        app:tint="@color/green_dark"
+                        android:contentDescription="@string/close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/avgT"
+                        android:layout_marginTop="3dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/Tcont"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/openT"
+                        android:orientation="vertical"
+                        android:layout_marginTop="2dp"
+                        android:padding="5dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Tdiv"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_physical_activity"
+        android:contentDescription="@string/newPhysicalActivity"
+        android:src="@drawable/img_shoe"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:fabSize="mini"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_glycemia"
+        android:contentDescription="@string/newGlycemia"
+        android:src="@drawable/img_drop"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:fabSize="mini"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_weight"
+        android:contentDescription="@string/newWeight"
+        android:src="@drawable/img_weight"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:fabSize="mini"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_pulse"
+        android:contentDescription="@string/newPulse"
+        android:src="@drawable/img_heart_beat"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:fabSize="mini"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_oxygen_saturation"
+        android:contentDescription="@string/newOxygenSaturation"
+        android:src="@drawable/img_oxygen"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:fabSize="mini"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_temperature"
+        android:contentDescription="@string/newTemperature"
+        android:src="@drawable/img_thermometer"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:fabSize="mini"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_report"
+        android:contentDescription="@string/newReport"
+        android:src="@android:drawable/ic_input_add"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

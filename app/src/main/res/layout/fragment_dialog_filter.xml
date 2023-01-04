@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green">
+
+    <ImageView
+        android:id="@+id/back"
+        app:srcCompat="@drawable/ic_arrow_back"
+        app:tint="@color/white"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="12dp"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/PA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/physicalActivity"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                app:flexWrap="wrap">
+
+                <CheckBox
+                    android:id="@+id/PAattention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/attention" />
+
+                <CheckBox
+                    android:id="@+id/calories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:enabled="false"
+                    android:text="@string/calories" />
+
+                <CheckBox
+                    android:id="@+id/steps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/steps" />
+
+                <CheckBox
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/distance" />
+
+                <CheckBox
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/duration" />
+
+                <CheckBox
+                    android:id="@+id/PAcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/comment" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <CheckBox
+                android:id="@+id/G"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/glycemia"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                app:flexWrap="wrap">
+
+                <CheckBox
+                    android:id="@+id/Gattention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/attention" />
+
+
+                <CheckBox
+                    android:id="@+id/glycemiaVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:enabled="false"
+                    android:text="@string/glycemiaVal"/>
+                <CheckBox
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/label"/>
+                <CheckBox
+                    android:id="@+id/HbA1C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/HbA1C"/>
+                <CheckBox
+                    android:id="@+id/breadUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/breadUnit"/>
+                <CheckBox
+                    android:id="@+id/bolus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/bolus"/>
+                <CheckBox
+                    android:id="@+id/basal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/basal"/>
+                <CheckBox
+                    android:id="@+id/Gcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/comment"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <CheckBox
+                android:id="@+id/W"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/weight" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                app:flexWrap="wrap">
+
+                <CheckBox
+                    android:id="@+id/Wattention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/attention" />
+
+                <CheckBox
+                    android:id="@+id/weightVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:enabled="false"
+                    android:text="@string/weight" />
+
+                <CheckBox
+                    android:id="@+id/muscles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/muscles" />
+
+                <CheckBox
+                    android:id="@+id/bodyFat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/bodyFat" />
+
+                <CheckBox
+                    android:id="@+id/water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/water" />
+
+                <CheckBox
+                    android:id="@+id/Wcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/comment" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <CheckBox
+                android:id="@+id/P"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pulse"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                app:flexWrap="wrap">
+
+                <CheckBox
+                    android:id="@+id/Pattention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/attention" />
+
+                <CheckBox
+                    android:id="@+id/avgPulse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:enabled="false"
+                    android:text="@string/avgPulse"/>
+                <CheckBox
+                    android:id="@+id/maxPulse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/maxPulse"/>
+                <CheckBox
+                    android:id="@+id/minPulse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/minPulse"/>
+                <CheckBox
+                    android:id="@+id/Pcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/comment"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <CheckBox
+                android:id="@+id/O"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/oxygenSaturation" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                app:flexWrap="wrap">
+
+                <CheckBox
+                    android:id="@+id/Oattention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/attention" />
+
+                <CheckBox
+                    android:id="@+id/SpO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:enabled="false"
+                    android:text="@string/SpO" />
+
+                <CheckBox
+                    android:id="@+id/SpOMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/SpOMax" />
+
+                <CheckBox
+                    android:id="@+id/SpOMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/SpOMin" />
+
+                <CheckBox
+                    android:id="@+id/Ocomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/comment" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <CheckBox
+                android:id="@+id/T"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/temperature"/>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                app:flexWrap="wrap">
+
+                <CheckBox
+                    android:id="@+id/Tattention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/attention" />
+
+
+                <CheckBox
+                    android:id="@+id/temperatureVal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:enabled="false"
+                    android:text="@string/temperature"/>
+
+                <CheckBox
+                    android:id="@+id/Tcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/comment"/>
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

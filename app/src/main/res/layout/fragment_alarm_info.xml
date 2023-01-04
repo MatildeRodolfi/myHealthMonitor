@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <TimePicker
+        android:id="@+id/alarmTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/alarmDateTitle"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/alarmDatePicker"
+        app:layout_constraintTop_toBottomOf="@id/alarmTimePicker"/>
+
+    <TextView
+        android:id="@+id/alarmDate"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/date"
+        app:layout_constraintStart_toEndOf="@id/alarmDateTitle"
+        app:layout_constraintBottom_toBottomOf="@id/alarmDatePicker"
+        app:layout_constraintTop_toBottomOf="@id/alarmTimePicker"/>
+
+    <ImageView
+        android:id="@+id/alarmDatePicker"
+        app:srcCompat="@drawable/ic_calendar"
+        app:tint="@color/black"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmTimePicker"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/alarmDaysOfWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmDatePicker"
+        app:chipSpacingHorizontal="5dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/alarmMonday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:text="@string/mondayAbbreviation" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/alarmTuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tuesdayAbbreviation"
+            android:checkable="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/alarmWednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wednesdayAbbreviation"
+            android:checkable="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/alarmThursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/thursdayAbbreviation"
+            android:checkable="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/alarmFriday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fridayAbbreviation"
+            android:checkable="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/alarmSaturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/saturdayAbbreviation"
+            android:checkable="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/alarmSunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sundayAbbreviation"
+            android:checkable="true"
+            style="@style/Widget.MaterialComponents.Chip.Choice"/>
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/alarmNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmDaysOfWeek" />
+
+    <EditText
+        android:id="@+id/alarmName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmNameTitle" />
+
+    <TextView
+        android:id="@+id/alarmSound"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/sound"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmName"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/alarmSoundActive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmName"
+        android:checked="true"/>
+
+    <TextView
+        android:id="@+id/alarmVibration"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/vibration"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmSound"/>
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/alarmVibrationActive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/alarmSound"
+        android:checked="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
